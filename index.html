@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- KOMENTAR: Judul halaman web yang tampil di tab browser -->
+<title>Profil SMPN 12 Tangerang Selatan</title>
+
+
+<style>
+/* ========================================================== */
+/* PENGATURAN TEMA WARNA WEBSITE                              */
+/* ========================================================== */
+:root {
+ --warna-header: #479499;      /* Warna latar judul & bagian header/footer */
+ --warna-teks-header: #fffffff5; /* Warna tulisan di bagian header */
+ --warna-tombol: #ff4f4f;      /* Warna tombol aksi (CTA) */
+ --warna-latar: #0f385e4d;       /* Warna latar belakang halaman web */
+}
+
+
+/* ===== PENGATURAN DASAR TAMPILAN ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+ font-family: Arial, sans-serif;
+ background: var(--warna-latar);
+ color: #24242b;
+ line-height: 1.6;
+}
+
+
+/* ===== HEADER (BAGIAN UTAMA PALING ATAS) ===== */
+header {
+ background: var(--warna-header);
+ color: var(--warna-teks-header);
+ text-align: center;
+ padding: 70px 20px 50px 20px;
+}
+
+
+/* PENGATURAN UKURAN & BENTUK LOGO SEKOLAH */
+.logo-sekolah {
+ width: 90px;
+ height: 90px;
+ object-fit: cover;
+ border-radius: 50%; /* Membuat foto menjadi bulat */
+ border: 3px solid white;
+ margin-bottom: 15px;
+}
+header h1 { font-size: 2.3rem; margin-bottom: 10px; }
+header p { font-size: 1.1rem; margin-bottom: 15px; }
+
+
+/* ===== TOMBOL AKSI (CTA BUTTON) ===== */
+.tombol {
+ display: inline-block;
+ background: var(--warna-tombol);
+ color: #ffffff;
+ padding: 12px 30px;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: bold;
+ font-size: 1.1rem;
+}
+.tombol:hover { transform: scale(1.06); } /* Efek membesar saat kursor diarahkan */
+
+
+/* ===== PENGATURAN KOTAK / KONTAINER UTAMA ===== */
+.kontainer { max-width: 1000px; margin: 0 auto; padding: 45px 20px; }
+h2 {
+ color: var(--warna-header);
+ text-align: center;
+ font-size: 2rem;
+ margin-bottom: 25px;
+}
+.kartu {
+ background: #ffffff;
+ border-radius: 16px;
+ padding: 25px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Efek bayangan kotak */
+}
+.grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 20px;
+}
+.ekskul { text-align: center; font-weight: bold; font-size: 1.1rem; }
+.ekskul span { display: block; font-size: 2.2rem; margin-bottom: 6px; }
+
+
+/* ===== PENGATURAN GAMBAR / FOTO DI DALAM GRID ===== */
+.grid img {
+ width: 100%;
+ height: 180px;
+ object-fit: cover;
+ border-radius: 12px;
+ margin-bottom: 10px;
+}
+
+
+/* ===== KOTAK THUMBNAIL VIDEO DENGAN TOMBOL PLAY ===== */
+.video-thumbnail-container {
+ position: relative;
+ width: 100%;
+ max-width: 700px;
+ margin: 0 auto;
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.video-thumbnail-container img {
+ width: 100%;
+ height: auto;
+ display: block;
+}
+.overlay-play {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.35);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ transition: background 0.3s ease;
+ text-decoration: none;
+}
+.overlay-play:hover {
+ background: rgba(0, 0, 0, 0.5);
+}
+.ikon-play {
+ width: 75px;
+ height: 75px;
+ background: #ff0000;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: white;
+ font-size: 32px;
+ padding-left: 5px; /* Sedikit menggeser ikon segitiga agar pas di tengah */
+ box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+ transition: transform 0.3s ease;
+}
+.overlay-play:hover .ikon-play {
+ transform: scale(1.15);
+}
+.teks-play {
+ color: white;
+ font-weight: bold;
+ font-size: 1.1rem;
+ margin-top: 15px;
+ text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+
+/* ===== BAGIAN FOOTER (BAWAH HALAMAN) ===== */
+footer {
+ background: var(--warna-header);
+ color: var(--warna-teks-header);
+ text-align: center;
+ padding: 25px 20px;
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 1: HEADER, LOGO, & IDENTITAS SEKOLAH                -->
+<!-- ========================================================== -->
+<header>
+ <!--
+   CARA MENGGANTI FOTO/LOGO DARI KOMPUTER LOKAL:
+   1. Simpan file gambar logo di folder yang SAMA dengan file HTML ini.
+   2. Ganti 'https://via.placeholder.com/150' dengan nama file logo Anda, misal: src="logo-bima.png"
+ -->
+ <img src="logo.png" alt="Logo SMK Bina Informatika" class="logo-sekolah">
+  <h1>SMPN 12 TANGERANG Selatan</h1>
+ <p> Sekolah Berhati (Bersih, Sehat, dan Indah) di Tangerang Selatan.</p>
+ <p style="font-size: 0.95rem; opacity: 0.9;">📍 Jl. Jurangmangu Barat No. 62, Kelurahan Jurangmangu Barat, Kecamatan Pondok Aren, Kota Tangerang Selatan, Provinsi Banten</p>
+  <br>
+ <a class="tombol" href="#profil">Jelajahi Profil</a>
+</header>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 2: TENTANG SEKOLAH, PROFIL, & VISI MISI            -->
+<!-- ========================================================== -->
+<div class="kontainer" id="profil">
+ <h2>Tentang Sekolah Kami</h2>
+ <div class="kartu">
+   <p><strong>Profil Singkat:</strong>UPTD SMP Negeri 12 Kota Tangerang Selatan (yang akrab disapa dengan julukan Snedo atau Snedu) adalah sekolah menengah pertama negeri berakreditasi A yang berlokasi di kawasan Pondok Aren. Didirikan sejak April 2001, sekolah ini memiliki komitmen kuat dalam menyeimbangkan prestasi akademik, pengembangan karakter, dan pelestarian lingkungan hidup.</p>
+   <br>
+   <p><strong>Visi Sekolah:</strong>• Berfokus pada pembentukan generasi yang cerdas, inovatif, dan berakhlak mulia. Sejak awal masuk sekolah, para siswa baru ditanamkan nilai-nilai karakter kuat, salah satunya melalui pembekalan nilai-nilai kedisiplinan dan tanggung jawab khas sekolah.</p>
+   <br>
+   <p><strong>Misi Sekolah:</strong></p>
+   <ul style="margin-left: 20px; margin-top: 5px;">
+     <li>Meningkatkan Mutu Akademik & Non-Akademik</li>
+     <li>Pendidikan Karakter & Akhlak Mulia</li>
+     <li>Mengembangkan Kreativitas & Inovasi</li>
+     <li>Pelestarian Lingkungan (Adiwiyata)</li>
+   </ul>
+ </div>
+</div>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 3: COVER VIDEO YOUTUBE DENGAN TOMBOL PLAY KUSTOM    -->
+<!-- ========================================================== -->
+<div class="kontainer">
+ <h2>Video Profil Sekolah</h2>
+ <div class="kartu">
+  
+   <!-- Tampilan Cover Depan Thumbnail Video YouTube Terlihat Jelas -->
+   <div class="video-thumbnail-container">
+     <!-- Gambar diambil otomatis dari thumbnail video YouTube -->
+     <img src="https://i.ytimg.com/an_webp/7sxVbd6oCcc/mqdefault_6s.webp?du=3000&sqp=CNu0ldcG&rs=AOn4CLD5MqfrWnlurDZvQhJ_uDR0ww7EWg" alt="Cover Video Profil SMPN 12 Tangerang Selatan">
+    
+     <!-- Tombol Play di atas gambar yang langsung mengarah ke video YouTube -->
+     <a href="https://youtu.be/7sxVbd6oCcc?si=tZCH2F8OISJxGTSo" target="_blank" class="overlay-play">
+       <div class="ikon-play">▶</div>
+       <div class="teks-play">▶ Tonton Video Profil SMPN 12 Tangerang Selatan</div>
+     </a>
+   </div>
+
+
+   <p style="font-size: 0.9rem; color: #555; text-align: center; margin-top: 15px;">
+     Klik pada gambar di atas untuk menyaksikan video profil lengkap fasilitas dan kegiatan belajar di sekolah.
+   </p>
+
+
+ </div>
+</div>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 4: FOTO & INFORMASI EKSTRAKURIKULER                 -->
+<!-- ========================================================== -->
+<div class="kontainer">
+ <h2>Ekstrakurikuler Pilihan</h2>
+ <div class="grid">
+  
+   <!-- Ekskul 1 -->
+   <div class="kartu ekskul">
+     <img src="aM3TxWL7WrYXYfWzj1CZeyGo5ASNTx1Rx8e7MMHj.jpg" alt="Foto Coding Club">
+     <span>💻</span> Coding & Web Club
+     <p style="font-size: 0.9rem; font-weight: normal; color: #555; margin-top: 8px;">Wadah eksplorasi pembuatan website, aplikasi, dan logika pemrograman.</p>
+   </div>
+
+
+   <!-- Ekskul 2 -->
+   <div class="kartu ekskul">
+     <img src="1157586_642283449136231_1162123221_n.jpg" alt="Foto Multimedia">
+     <span>🎬</span> Pramuka
+     <p style="font-size: 0.9rem; font-weight: normal; color: #555; margin-top: 8px;">Pelatihan editing video, desain grafis, dan konten kreator kreatif.</p>
+   </div>
+
+
+   <!-- Ekskul 3 -->
+   <div class="kartu ekskul">
+     <img src="20603138-1.jpg" alt="Foto Olahraga">
+     <span>⚽</span> Basket
+     <p style="font-size: 0.9rem; font-weight: normal; color: #555; margin-top: 8px;">Menyalurkan bakat olahraga, kesehatan fisik, dan sportivitas tim.</p>
+   </div>
+
+
+ </div>
+</div>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 5: FOTO & INFORMASI LOMBA / PRESTASI                -->
+<!-- ========================================================== -->
+<div class="kontainer">
+ <h2>Galeri Lomba & Prestasi</h2>
+ <div class="grid">
+  
+   <!-- Prestasi 1 -->
+   <div class="kartu">
+     <img src="9c4b129a9cd333471294c8970b6832e2.jpg" alt="Foto Lomba 1">
+     <h3 style="font-size: 1.1rem; color: var(--warna-header); margin-bottom: 5px;">🏆 Piala siswa </h3>
+     <p style="font-size: 0.9rem; color: #555;">Prestasi gemilang siswa kejuruan dalam berbagai bidang.</p>
+   </div>
+
+
+   <!-- Prestasi 2 -->
+   <div class="kartu">
+     <img src="7f6da0ae1aa5d9d7c1080346e2ced24c-20251029YGA01.webp" alt="Foto Lomba 2">
+     <h3 style="font-size: 1.1rem; color: var(--warna-header); margin-bottom: 5px;">🌟 Pameran Produk Kreatif & Kewirausahaan</h3>
+     <p style="font-size: 0.9rem; color: #555;">Hasil karya aplikasi dan inovasi digital ciptaan siswa-siswi SMK.</p>
+   </div>
+
+
+ </div>
+</div>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 6: FOOTER (BAGIAN BAWAH WEBSITE)                    -->
+<!-- ========================================================== -->
+<footer>
+ <p>&copy; 2026 SMPN 12 Tangerang Selatan · Dibuat oleh: [Ghaisan Fathi Muharram]</p>
+</footer>
+
+
+</body>
+</html>
